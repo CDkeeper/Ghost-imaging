@@ -1,7 +1,7 @@
 import numpy as np  # 不用管
 from cv2 import cv2 as cv  # 不用管
 
-imgpath = "C:/Users/chenda/Desktop/SwinIR-main/testsets/Set12/12.png"  # 图片路径
+imgpath = "path../1.png"  # 图片路径
 img = cv.imread(imgpath, 0)  # 读取图片，0代表灰白图片
 
 iteration = 20000  # 设定帧数，10000帧
@@ -33,5 +33,5 @@ mi = np.min(GI)
 mx = np.max(GI)
 GI = 255 * (GI - mi) / (mx - mi)
 
-cv.imwrite("C:/Users/chenda/Desktop/SwinIR-main/testsets/Set12_GI/12.png", GI)  # 导出图片
+cv.imwrite("path../1_new.png", GI)  # 导出图片
 print("Completed!")
